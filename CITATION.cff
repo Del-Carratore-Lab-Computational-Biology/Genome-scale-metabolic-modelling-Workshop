@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use or adapt these workshop materials, please cite them as below."
+title: "CODE-M Workshop: Genome-Scale Metabolic Modelling"
+abstract: >-
+  Slides, Jupyter notebooks, helper code and model files for a three-day
+  hands-on workshop on genome-scale metabolic models with Python (cobrapy):
+  flux balance analysis, model reconstruction (by hand and with ModelSEED),
+  model quality (MEMOTE), FVA and pFBA, gene essentiality, strain design and
+  omics integration.
+authors:
+  - family-names: Del Carratore
+    given-names: Francesco
+  - family-names: Chapman
+    given-names: Stephen
+license:
+  - CC-BY-4.0
+  - MIT
+keywords:
+  - genome-scale metabolic models
+  - flux balance analysis
+  - constraint-based modelling
+  - metabolic reconstruction
+  - cobrapy
+  - systems biology
+  - teaching materials

@@ -1,0 +1,20 @@
+# macOS
+.DS_Store
+
+# Office lock files (created while a .pptx/.docx is open)
+~$*
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+condaenv.*.requirements.txt
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Escher maps written when the notebooks are run
+Day1/aerobic_e_coli.html
+Day3/02_Beyond_FBA/ecoli_core_aerobic.html
+Day3/02_Beyond_FBA/ecoli_core_anaerobic.html

@@ -1,0 +1,8 @@
+,E. coli,E. coli,B. subtilis,B. subtilis,L. lactis,L. lactis
+,ModelSEED,iML1515,ModelSEED,iYO844,ModelSEED,iNF517
+All reactions,1867,2712,1525,1250,1083,754
+Metabolites,1514,1877,1345,990,1044,650
+Genes,1346,1516,1062,844,699,516
+Gap-filled reactions,3,–,37,–,63,–
+Grows on minimal glucose?,yes,yes,yes,yes,no,no
+Genes shared with BiGG,1175,–,695,–,448,–

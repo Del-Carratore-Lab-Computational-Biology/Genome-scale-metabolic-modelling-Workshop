@@ -1,0 +1,1503 @@
+[
+ {
+  "map_name": "Toybacter fermentans",
+  "map_id": "toybacter_codem",
+  "map_description": "CODE-M Day 2 toy reconstruction",
+  "homepage": "https://escher.github.io",
+  "schema": "https://escher.github.io/escher/jsonschema/1-0-0#"
+ },
+ {
+  "reactions": {
+   "1000": {
+    "name": "glucose transport (uniport)",
+    "bigg_id": "GLCt",
+    "reversibility": false,
+    "label_x": 337.0,
+    "label_y": 106.0,
+    "gene_reaction_rule": "TF_0001",
+    "genes": [
+     {
+      "bigg_id": "TF_0001",
+      "name": "glcP"
+     }
+    ],
+    "metabolites": [
+     {
+      "bigg_id": "glc__D_e",
+      "coefficient": -1
+     },
+     {
+      "bigg_id": "glc__D_c",
+      "coefficient": 1
+     }
+    ],
+    "segments": {
+     "1": {
+      "from_node_id": "16",
+      "to_node_id": "17",
+      "b1": null,
+      "b2": null
+     },
+     "2": {
+      "from_node_id": "18",
+      "to_node_id": "16",
+      "b1": null,
+      "b2": null
+     },
+     "3": {
+      "from_node_id": "1",
+      "to_node_id": "17",
+      "b1": null,
+      "b2": null
+     },
+     "4": {
+      "from_node_id": "18",
+      "to_node_id": "2",
+      "b1": null,
+      "b2": null
+     }
+    }
+   },
+   "1001": {
+    "name": "glycolysis (lumped)",
+    "bigg_id": "GLYC",
+    "reversibility": false,
+    "label_x": 472.0,
+    "label_y": 216.0,
+    "gene_reaction_rule": "TF_0002 and TF_0003 and TF_0004",
+    "genes": [
+     {
+      "bigg_id": "TF_0002",
+      "name": "pfkA"
+     },
+     {
+      "bigg_id": "TF_0004",
+      "name": "pykF"
+     },
+     {
+      "bigg_id": "TF_0003",
+      "name": "gapA"
+     }
+    ],
+    "metabolites": [
+     {
+      "bigg_id": "glc__D_c",
+      "coefficient": -1
+     },
+     {
+      "bigg_id": "adp_c",
+      "coefficient": -2.0
+     },
+     {
+      "bigg_id": "pi_c",
+      "coefficient": -2.0
+     },
+     {
+      "bigg_id": "nad_c",
+      "coefficient": -2.0
+     },
+     {
+      "bigg_id": "pyr_c",
+      "coefficient": 2.0
+     },
+     {
+      "bigg_id": "atp_c",
+      "coefficient": 2.0
+     },
+     {
+      "bigg_id": "nadh_c",
+      "coefficient": 2.0
+     },
+     {
+      "bigg_id": "h_c",
+      "coefficient": 2.0
+     },
+     {
+      "bigg_id": "h2o_c",
+      "coefficient": 2.0
+     }
+    ],
+    "segments": {
+     "1": {
+      "from_node_id": "19",
+      "to_node_id": "20",
+      "b1": null,
+      "b2": null
+     },
+     "2": {
+      "from_node_id": "21",
+      "to_node_id": "19",
+      "b1": null,
+      "b2": null
+     },
+     "3": {
+      "from_node_id": "2",
+      "to_node_id": "20",
+      "b1": null,
+      "b2": null
+     },
+     "4": {
+      "from_node_id": "21",
+      "to_node_id": "3",
+      "b1": null,
+      "b2": null
+     }
+    }
+   },
+   "1002": {
+    "name": "L-lactate dehydrogenase",
+    "bigg_id": "LDH",
+    "reversibility": false,
+    "label_x": 587.0,
+    "label_y": 326.0,
+    "gene_reaction_rule": "TF_0005",
+    "genes": [
+     {
+      "bigg_id": "TF_0005",
+      "name": "ldh"
+     }
+    ],
+    "metabolites": [
+     {
+      "bigg_id": "pyr_c",
+      "coefficient": -1
+     },
+     {
+      "bigg_id": "nadh_c",
+      "coefficient": -1
+     },
+     {
+      "bigg_id": "h_c",
+      "coefficient": -1
+     },
+     {
+      "bigg_id": "lac__L_c",
+      "coefficient": 1
+     },
+     {
+      "bigg_id": "nad_c",
+      "coefficient": 1
+     }
+    ],
+    "segments": {
+     "1": {
+      "from_node_id": "22",
+      "to_node_id": "23",
+      "b1": null,
+      "b2": null
+     },
+     "2": {
+      "from_node_id": "24",
+      "to_node_id": "22",
+      "b1": null,
+      "b2": null
+     },
+     "3": {
+      "from_node_id": "3",
+      "to_node_id": "23",
+      "b1": null,
+      "b2": null
+     },
+     "4": {
+      "from_node_id": "24",
+      "to_node_id": "4",
+      "b1": null,
+      "b2": null
+     }
+    }
+   },
+   "1003": {
+    "name": "L-lactate transport (H+ symport)",
+    "bigg_id": "LACt2r",
+    "reversibility": true,
+    "label_x": 832.0,
+    "label_y": 326.0,
+    "gene_reaction_rule": "TF_0006",
+    "genes": [
+     {
+      "bigg_id": "TF_0006",
+      "name": "lctP"
+     }
+    ],
+    "metabolites": [
+     {
+      "bigg_id": "lac__L_e",
+      "coefficient": -1
+     },
+     {
+      "bigg_id": "h_e",
+      "coefficient": -1
+     },
+     {
+      "bigg_id": "lac__L_c",
+      "coefficient": 1
+     },
+     {
+      "bigg_id": "h_c",
+      "coefficient": 1
+     }
+    ],
+    "segments": {
+     "1": {
+      "from_node_id": "25",
+      "to_node_id": "26",
+      "b1": null,
+      "b2": null
+     },
+     "2": {
+      "from_node_id": "27",
+      "to_node_id": "25",
+      "b1": null,
+      "b2": null
+     },
+     "3": {
+      "from_node_id": "5",
+      "to_node_id": "26",
+      "b1": null,
+      "b2": null
+     },
+     "4": {
+      "from_node_id": "27",
+      "to_node_id": "4",
+      "b1": null,
+      "b2": null
+     }
+    }
+   },
+   "1004": {
+    "name": "pyruvate formate-lyase",
+    "bigg_id": "PFL",
+    "reversibility": false,
+    "label_x": 472,
+    "label_y": 446,
+    "gene_reaction_rule": "TF_0007 and TF_0008",
+    "genes": [
+     {
+      "bigg_id": "TF_0008",
+      "name": "pflA"
+     },
+     {
+      "bigg_id": "TF_0007",
+      "name": "pflB"
+     }
+    ],
+    "metabolites": [
+     {
+      "bigg_id": "pyr_c",
+      "coefficient": -1
+     },
+     {
+      "bigg_id": "coa_c",
+      "coefficient": -1
+     },
+     {
+      "bigg_id": "accoa_c",
+      "coefficient": 1
+     },
+     {
+      "bigg_id": "for_c",
+      "coefficient": 1
+     }
+    ],
+    "segments": {
+     "1": {
+      "from_node_id": "28",
+      "to_node_id": "29",
+      "b1": null,
+      "b2": null
+     },
+     "2": {
+      "from_node_id": "30",
+      "to_node_id": "28",
+      "b1": null,
+      "b2": null
+     },
+     "3": {
+      "from_node_id": "3",
+      "to_node_id": "29",
+      "b1": null,
+      "b2": null
+     },
+     "4": {
+      "from_node_id": "30",
+      "to_node_id": "8",
+      "b1": null,
+      "b2": null
+     },
+     "5": {
+      "from_node_id": "30",
+      "to_node_id": "6",
+      "b1": null,
+      "b2": null
+     }
+    }
+   },
+   "1005": {
+    "name": "formate transport (H+ symport)",
+    "bigg_id": "FORt2r",
+    "reversibility": true,
+    "label_x": 832.0,
+    "label_y": 446.0,
+    "gene_reaction_rule": "TF_0009",
+    "genes": [
+     {
+      "bigg_id": "TF_0009",
+      "name": "focA"
+     }
+    ],
+    "metabolites": [
+     {
+      "bigg_id": "for_e",
+      "coefficient": -1
+     },
+     {
+      "bigg_id": "h_e",
+      "coefficient": -1
+     },
+     {
+      "bigg_id": "for_c",
+      "coefficient": 1
+     },
+     {
+      "bigg_id": "h_c",
+      "coefficient": 1
+     }
+    ],
+    "segments": {
+     "1": {
+      "from_node_id": "31",
+      "to_node_id": "32",
+      "b1": null,
+      "b2": null
+     },
+     "2": {
+      "from_node_id": "33",
+      "to_node_id": "31",
+      "b1": null,
+      "b2": null
+     },
+     "3": {
+      "from_node_id": "7",
+      "to_node_id": "32",
+      "b1": null,
+      "b2": null
+     },
+     "4": {
+      "from_node_id": "33",
+      "to_node_id": "6",
+      "b1": null,
+      "b2": null
+     }
+    }
+   },
+   "1006": {
+    "name": "phosphotransacetylase + acetate kinase (lumped)",
+    "bigg_id": "ACK",
+    "reversibility": false,
+    "label_x": 587.0,
+    "label_y": 566.0,
+    "gene_reaction_rule": "TF_0010 and (TF_0011 or TF_0012)",
+    "genes": [
+     {
+      "bigg_id": "TF_0010",
+      "name": "pta"
+     },
+     {
+      "bigg_id": "TF_0011",
+      "name": "ackA"
+     },
+     {
+      "bigg_id": "TF_0012",
+      "name": "ackB"
+     }
+    ],
+    "metabolites": [
+     {
+      "bigg_id": "accoa_c",
+      "coefficient": -1
+     },
+     {
+      "bigg_id": "pi_c",
+      "coefficient": -1
+     },
+     {
+      "bigg_id": "adp_c",
+      "coefficient": -1
+     },
+     {
+      "bigg_id": "ac_c",
+      "coefficient": 1
+     },
+     {
+      "bigg_id": "coa_c",
+      "coefficient": 1
+     },
+     {
+      "bigg_id": "atp_c",
+      "coefficient": 1
+     }
+    ],
+    "segments": {
+     "1": {
+      "from_node_id": "34",
+      "to_node_id": "35",
+      "b1": null,
+      "b2": null
+     },
+     "2": {
+      "from_node_id": "36",
+      "to_node_id": "34",
+      "b1": null,
+      "b2": null
+     },
+     "3": {
+      "from_node_id": "8",
+      "to_node_id": "35",
+      "b1": null,
+      "b2": null
+     },
+     "4": {
+      "from_node_id": "36",
+      "to_node_id": "9",
+      "b1": null,
+      "b2": null
+     }
+    }
+   },
+   "1007": {
+    "name": "acetate transport (H+ symport)",
+    "bigg_id": "ACt2r",
+    "reversibility": true,
+    "label_x": 832.0,
+    "label_y": 566.0,
+    "gene_reaction_rule": "TF_0013",
+    "genes": [
+     {
+      "bigg_id": "TF_0013",
+      "name": "actP"
+     }
+    ],
+    "metabolites": [
+     {
+      "bigg_id": "ac_e",
+      "coefficient": -1
+     },
+     {
+      "bigg_id": "h_e",
+      "coefficient": -1
+     },
+     {
+      "bigg_id": "ac_c",
+      "coefficient": 1
+     },
+     {
+      "bigg_id": "h_c",
+      "coefficient": 1
+     }
+    ],
+    "segments": {
+     "1": {
+      "from_node_id": "37",
+      "to_node_id": "38",
+      "b1": null,
+      "b2": null
+     },
+     "2": {
+      "from_node_id": "39",
+      "to_node_id": "37",
+      "b1": null,
+      "b2": null
+     },
+     "3": {
+      "from_node_id": "10",
+      "to_node_id": "38",
+      "b1": null,
+      "b2": null
+     },
+     "4": {
+      "from_node_id": "39",
+      "to_node_id": "9",
+      "b1": null,
+      "b2": null
+     }
+    }
+   },
+   "1008": {
+    "name": "acetaldehyde/alcohol dehydrogenase (lumped)",
+    "bigg_id": "ADH",
+    "reversibility": false,
+    "label_x": 587.0,
+    "label_y": 636.0,
+    "gene_reaction_rule": "TF_0014",
+    "genes": [
+     {
+      "bigg_id": "TF_0014",
+      "name": "adhE"
+     }
+    ],
+    "metabolites": [
+     {
+      "bigg_id": "accoa_c",
+      "coefficient": -1
+     },
+     {
+      "bigg_id": "nadh_c",
+      "coefficient": -2.0
+     },
+     {
+      "bigg_id": "h_c",
+      "coefficient": -2.0
+     },
+     {
+      "bigg_id": "coa_c",
+      "coefficient": 1
+     },
+     {
+      "bigg_id": "etoh_c",
+      "coefficient": 1
+     },
+     {
+      "bigg_id": "nad_c",
+      "coefficient": 2.0
+     }
+    ],
+    "segments": {
+     "1": {
+      "from_node_id": "40",
+      "to_node_id": "41",
+      "b1": null,
+      "b2": null
+     },
+     "2": {
+      "from_node_id": "42",
+      "to_node_id": "40",
+      "b1": null,
+      "b2": null
+     },
+     "3": {
+      "from_node_id": "8",
+      "to_node_id": "41",
+      "b1": null,
+      "b2": null
+     },
+     "4": {
+      "from_node_id": "42",
+      "to_node_id": "11",
+      "b1": null,
+      "b2": null
+     }
+    }
+   },
+   "1009": {
+    "name": "ammonium transport",
+    "bigg_id": "NH4t",
+    "reversibility": true,
+    "label_x": 287.0,
+    "label_y": 446.0,
+    "gene_reaction_rule": "TF_0015",
+    "genes": [
+     {
+      "bigg_id": "TF_0015",
+      "name": "amtB"
+     }
+    ],
+    "metabolites": [
+     {
+      "bigg_id": "nh4_e",
+      "coefficient": -1
+     },
+     {
+      "bigg_id": "nh4_c",
+      "coefficient": 1
+     }
+    ],
+    "segments": {
+     "1": {
+      "from_node_id": "43",
+      "to_node_id": "44",
+      "b1": null,
+      "b2": null
+     },
+     "2": {
+      "from_node_id": "45",
+      "to_node_id": "43",
+      "b1": null,
+      "b2": null
+     },
+     "3": {
+      "from_node_id": "13",
+      "to_node_id": "44",
+      "b1": null,
+      "b2": null
+     },
+     "4": {
+      "from_node_id": "45",
+      "to_node_id": "14",
+      "b1": null,
+      "b2": null
+     }
+    }
+   },
+   "1012": {
+    "name": "ethanol diffusion",
+    "bigg_id": "ETOHt",
+    "reversibility": true,
+    "label_x": 832.0,
+    "label_y": 706.0,
+    "gene_reaction_rule": "",
+    "genes": [],
+    "metabolites": [
+     {
+      "bigg_id": "etoh_c",
+      "coefficient": -1
+     },
+     {
+      "bigg_id": "etoh_e",
+      "coefficient": 1
+     }
+    ],
+    "segments": {
+     "1": {
+      "from_node_id": "46",
+      "to_node_id": "47",
+      "b1": null,
+      "b2": null
+     },
+     "2": {
+      "from_node_id": "48",
+      "to_node_id": "46",
+      "b1": null,
+      "b2": null
+     },
+     "3": {
+      "from_node_id": "11",
+      "to_node_id": "47",
+      "b1": null,
+      "b2": null
+     },
+     "4": {
+      "from_node_id": "48",
+      "to_node_id": "12",
+      "b1": null,
+      "b2": null
+     }
+    }
+   },
+   "1013": {
+    "name": "alanine dehydrogenase",
+    "bigg_id": "ALAD",
+    "reversibility": false,
+    "label_x": 412,
+    "label_y": 546,
+    "gene_reaction_rule": "TF_0018",
+    "genes": [
+     {
+      "bigg_id": "TF_0018",
+      "name": "ald"
+     }
+    ],
+    "metabolites": [
+     {
+      "bigg_id": "pyr_c",
+      "coefficient": -1
+     },
+     {
+      "bigg_id": "nh4_c",
+      "coefficient": -1
+     },
+     {
+      "bigg_id": "nadh_c",
+      "coefficient": -1
+     },
+     {
+      "bigg_id": "h_c",
+      "coefficient": -1
+     },
+     {
+      "bigg_id": "ala__L_c",
+      "coefficient": 1
+     },
+     {
+      "bigg_id": "nad_c",
+      "coefficient": 1
+     },
+     {
+      "bigg_id": "h2o_c",
+      "coefficient": 1
+     }
+    ],
+    "segments": {
+     "1": {
+      "from_node_id": "49",
+      "to_node_id": "50",
+      "b1": null,
+      "b2": null
+     },
+     "2": {
+      "from_node_id": "51",
+      "to_node_id": "49",
+      "b1": null,
+      "b2": null
+     },
+     "3": {
+      "from_node_id": "3",
+      "to_node_id": "50",
+      "b1": null,
+      "b2": null
+     },
+     "4": {
+      "from_node_id": "14",
+      "to_node_id": "50",
+      "b1": null,
+      "b2": null
+     },
+     "5": {
+      "from_node_id": "51",
+      "to_node_id": "15",
+      "b1": null,
+      "b2": null
+     }
+    }
+   },
+   "1014": {
+    "name": "biomass production",
+    "bigg_id": "BIOMASS",
+    "reversibility": false,
+    "label_x": 472,
+    "label_y": 786,
+    "gene_reaction_rule": "",
+    "genes": [],
+    "metabolites": [
+     {
+      "bigg_id": "ala__L_c",
+      "coefficient": -5.0
+     },
+     {
+      "bigg_id": "accoa_c",
+      "coefficient": -3.0
+     },
+     {
+      "bigg_id": "atp_c",
+      "coefficient": -40.0
+     },
+     {
+      "bigg_id": "h2o_c",
+      "coefficient": -40.0
+     },
+     {
+      "bigg_id": "coa_c",
+      "coefficient": 3.0
+     },
+     {
+      "bigg_id": "adp_c",
+      "coefficient": 40.0
+     },
+     {
+      "bigg_id": "pi_c",
+      "coefficient": 40.0
+     },
+     {
+      "bigg_id": "h_c",
+      "coefficient": 40.0
+     }
+    ],
+    "segments": {
+     "1": {
+      "from_node_id": "52",
+      "to_node_id": "53",
+      "b1": null,
+      "b2": null
+     },
+     "2": {
+      "from_node_id": "54",
+      "to_node_id": "52",
+      "b1": null,
+      "b2": null
+     },
+     "3": {
+      "from_node_id": "15",
+      "to_node_id": "53",
+      "b1": null,
+      "b2": null
+     },
+     "4": {
+      "from_node_id": "8",
+      "to_node_id": "53",
+      "b1": null,
+      "b2": null
+     }
+    }
+   },
+   "1016": {
+    "name": "D-glucose exchange",
+    "bigg_id": "EX_glc__D_e",
+    "reversibility": true,
+    "label_x": 122.0,
+    "label_y": 106.0,
+    "gene_reaction_rule": "",
+    "genes": [],
+    "metabolites": [
+     {
+      "bigg_id": "glc__D_e",
+      "coefficient": -1
+     }
+    ],
+    "segments": {
+     "1": {
+      "from_node_id": "55",
+      "to_node_id": "56",
+      "b1": null,
+      "b2": null
+     },
+     "2": {
+      "from_node_id": "57",
+      "to_node_id": "55",
+      "b1": null,
+      "b2": null
+     },
+     "3": {
+      "from_node_id": "1",
+      "to_node_id": "56",
+      "b1": null,
+      "b2": null
+     }
+    }
+   },
+   "1017": {
+    "name": "L-lactate exchange",
+    "bigg_id": "EX_lac__L_e",
+    "reversibility": false,
+    "label_x": 1042.0,
+    "label_y": 326.0,
+    "gene_reaction_rule": "",
+    "genes": [],
+    "metabolites": [
+     {
+      "bigg_id": "lac__L_e",
+      "coefficient": -1
+     }
+    ],
+    "segments": {
+     "1": {
+      "from_node_id": "58",
+      "to_node_id": "59",
+      "b1": null,
+      "b2": null
+     },
+     "2": {
+      "from_node_id": "60",
+      "to_node_id": "58",
+      "b1": null,
+      "b2": null
+     },
+     "3": {
+      "from_node_id": "5",
+      "to_node_id": "59",
+      "b1": null,
+      "b2": null
+     }
+    }
+   },
+   "1019": {
+    "name": "formate exchange",
+    "bigg_id": "EX_for_e",
+    "reversibility": false,
+    "label_x": 1042.0,
+    "label_y": 446.0,
+    "gene_reaction_rule": "",
+    "genes": [],
+    "metabolites": [
+     {
+      "bigg_id": "for_e",
+      "coefficient": -1
+     }
+    ],
+    "segments": {
+     "1": {
+      "from_node_id": "61",
+      "to_node_id": "62",
+      "b1": null,
+      "b2": null
+     },
+     "2": {
+      "from_node_id": "63",
+      "to_node_id": "61",
+      "b1": null,
+      "b2": null
+     },
+     "3": {
+      "from_node_id": "7",
+      "to_node_id": "62",
+      "b1": null,
+      "b2": null
+     }
+    }
+   },
+   "1020": {
+    "name": "acetate exchange",
+    "bigg_id": "EX_ac_e",
+    "reversibility": false,
+    "label_x": 1042.0,
+    "label_y": 566.0,
+    "gene_reaction_rule": "",
+    "genes": [],
+    "metabolites": [
+     {
+      "bigg_id": "ac_e",
+      "coefficient": -1
+     }
+    ],
+    "segments": {
+     "1": {
+      "from_node_id": "64",
+      "to_node_id": "65",
+      "b1": null,
+      "b2": null
+     },
+     "2": {
+      "from_node_id": "66",
+      "to_node_id": "64",
+      "b1": null,
+      "b2": null
+     },
+     "3": {
+      "from_node_id": "10",
+      "to_node_id": "65",
+      "b1": null,
+      "b2": null
+     }
+    }
+   },
+   "1021": {
+    "name": "ammonium exchange",
+    "bigg_id": "EX_nh4_e",
+    "reversibility": true,
+    "label_x": 122.0,
+    "label_y": 446.0,
+    "gene_reaction_rule": "",
+    "genes": [],
+    "metabolites": [
+     {
+      "bigg_id": "nh4_e",
+      "coefficient": -1
+     }
+    ],
+    "segments": {
+     "1": {
+      "from_node_id": "67",
+      "to_node_id": "68",
+      "b1": null,
+      "b2": null
+     },
+     "2": {
+      "from_node_id": "69",
+      "to_node_id": "67",
+      "b1": null,
+      "b2": null
+     },
+     "3": {
+      "from_node_id": "13",
+      "to_node_id": "68",
+      "b1": null,
+      "b2": null
+     }
+    }
+   },
+   "1023": {
+    "name": "ethanol exchange",
+    "bigg_id": "EX_etoh_e",
+    "reversibility": false,
+    "label_x": 1042.0,
+    "label_y": 706.0,
+    "gene_reaction_rule": "",
+    "genes": [],
+    "metabolites": [
+     {
+      "bigg_id": "etoh_e",
+      "coefficient": -1
+     }
+    ],
+    "segments": {
+     "1": {
+      "from_node_id": "70",
+      "to_node_id": "71",
+      "b1": null,
+      "b2": null
+     },
+     "2": {
+      "from_node_id": "72",
+      "to_node_id": "70",
+      "b1": null,
+      "b2": null
+     },
+     "3": {
+      "from_node_id": "12",
+      "to_node_id": "71",
+      "b1": null,
+      "b2": null
+     }
+    }
+   }
+  },
+  "nodes": {
+   "1": {
+    "node_type": "metabolite",
+    "x": 190,
+    "y": 120,
+    "bigg_id": "glc__D_e",
+    "name": "D-glucose",
+    "label_x": 170,
+    "label_y": 158,
+    "node_is_primary": true
+   },
+   "2": {
+    "node_type": "metabolite",
+    "x": 460,
+    "y": 120,
+    "bigg_id": "glc__D_c",
+    "name": "D-glucose",
+    "label_x": 440,
+    "label_y": 158,
+    "node_is_primary": true
+   },
+   "3": {
+    "node_type": "metabolite",
+    "x": 460,
+    "y": 340,
+    "bigg_id": "pyr_c",
+    "name": "pyruvate",
+    "label_x": 440,
+    "label_y": 378,
+    "node_is_primary": true
+   },
+   "4": {
+    "node_type": "metabolite",
+    "x": 690,
+    "y": 340,
+    "bigg_id": "lac__L_c",
+    "name": "L-lactate",
+    "label_x": 670,
+    "label_y": 378,
+    "node_is_primary": true
+   },
+   "5": {
+    "node_type": "metabolite",
+    "x": 950,
+    "y": 340,
+    "bigg_id": "lac__L_e",
+    "name": "L-lactate",
+    "label_x": 930,
+    "label_y": 378,
+    "node_is_primary": true
+   },
+   "6": {
+    "node_type": "metabolite",
+    "x": 690,
+    "y": 460,
+    "bigg_id": "for_c",
+    "name": "formate",
+    "label_x": 670,
+    "label_y": 498,
+    "node_is_primary": true
+   },
+   "7": {
+    "node_type": "metabolite",
+    "x": 950,
+    "y": 460,
+    "bigg_id": "for_e",
+    "name": "formate",
+    "label_x": 930,
+    "label_y": 498,
+    "node_is_primary": true
+   },
+   "8": {
+    "node_type": "metabolite",
+    "x": 460,
+    "y": 580,
+    "bigg_id": "accoa_c",
+    "name": "acetyl-CoA",
+    "label_x": 440,
+    "label_y": 618,
+    "node_is_primary": true
+   },
+   "9": {
+    "node_type": "metabolite",
+    "x": 690,
+    "y": 580,
+    "bigg_id": "ac_c",
+    "name": "acetate",
+    "label_x": 670,
+    "label_y": 618,
+    "node_is_primary": true
+   },
+   "10": {
+    "node_type": "metabolite",
+    "x": 950,
+    "y": 580,
+    "bigg_id": "ac_e",
+    "name": "acetate",
+    "label_x": 930,
+    "label_y": 618,
+    "node_is_primary": true
+   },
+   "11": {
+    "node_type": "metabolite",
+    "x": 690,
+    "y": 720,
+    "bigg_id": "etoh_c",
+    "name": "ethanol",
+    "label_x": 670,
+    "label_y": 758,
+    "node_is_primary": true
+   },
+   "12": {
+    "node_type": "metabolite",
+    "x": 950,
+    "y": 720,
+    "bigg_id": "etoh_e",
+    "name": "ethanol",
+    "label_x": 930,
+    "label_y": 758,
+    "node_is_primary": true
+   },
+   "13": {
+    "node_type": "metabolite",
+    "x": 190,
+    "y": 460,
+    "bigg_id": "nh4_e",
+    "name": "ammonium",
+    "label_x": 170,
+    "label_y": 498,
+    "node_is_primary": true
+   },
+   "14": {
+    "node_type": "metabolite",
+    "x": 360,
+    "y": 460,
+    "bigg_id": "nh4_c",
+    "name": "ammonium",
+    "label_x": 340,
+    "label_y": 498,
+    "node_is_primary": true
+   },
+   "15": {
+    "node_type": "metabolite",
+    "x": 360,
+    "y": 700,
+    "bigg_id": "ala__L_c",
+    "name": "L-alanine",
+    "label_x": 340,
+    "label_y": 738,
+    "node_is_primary": true
+   },
+   "16": {
+    "node_type": "midmarker",
+    "x": 325.0,
+    "y": 120.0
+   },
+   "17": {
+    "node_type": "multimarker",
+    "x": 305.0,
+    "y": 120.0
+   },
+   "18": {
+    "node_type": "multimarker",
+    "x": 345.0,
+    "y": 120.0
+   },
+   "19": {
+    "node_type": "midmarker",
+    "x": 460.0,
+    "y": 230.0
+   },
+   "20": {
+    "node_type": "multimarker",
+    "x": 460.0,
+    "y": 210.0
+   },
+   "21": {
+    "node_type": "multimarker",
+    "x": 460.0,
+    "y": 250.0
+   },
+   "22": {
+    "node_type": "midmarker",
+    "x": 575.0,
+    "y": 340.0
+   },
+   "23": {
+    "node_type": "multimarker",
+    "x": 555.0,
+    "y": 340.0
+   },
+   "24": {
+    "node_type": "multimarker",
+    "x": 595.0,
+    "y": 340.0
+   },
+   "25": {
+    "node_type": "midmarker",
+    "x": 820.0,
+    "y": 340.0
+   },
+   "26": {
+    "node_type": "multimarker",
+    "x": 840.0,
+    "y": 340.0
+   },
+   "27": {
+    "node_type": "multimarker",
+    "x": 800.0,
+    "y": 340.0
+   },
+   "28": {
+    "node_type": "midmarker",
+    "x": 460,
+    "y": 460
+   },
+   "29": {
+    "node_type": "multimarker",
+    "x": 460.0,
+    "y": 440.0
+   },
+   "30": {
+    "node_type": "multimarker",
+    "x": 460.0,
+    "y": 480.0
+   },
+   "31": {
+    "node_type": "midmarker",
+    "x": 820.0,
+    "y": 460.0
+   },
+   "32": {
+    "node_type": "multimarker",
+    "x": 840.0,
+    "y": 460.0
+   },
+   "33": {
+    "node_type": "multimarker",
+    "x": 800.0,
+    "y": 460.0
+   },
+   "34": {
+    "node_type": "midmarker",
+    "x": 575.0,
+    "y": 580.0
+   },
+   "35": {
+    "node_type": "multimarker",
+    "x": 555.0,
+    "y": 580.0
+   },
+   "36": {
+    "node_type": "multimarker",
+    "x": 595.0,
+    "y": 580.0
+   },
+   "37": {
+    "node_type": "midmarker",
+    "x": 820.0,
+    "y": 580.0
+   },
+   "38": {
+    "node_type": "multimarker",
+    "x": 840.0,
+    "y": 580.0
+   },
+   "39": {
+    "node_type": "multimarker",
+    "x": 800.0,
+    "y": 580.0
+   },
+   "40": {
+    "node_type": "midmarker",
+    "x": 575.0,
+    "y": 650.0
+   },
+   "41": {
+    "node_type": "multimarker",
+    "x": 557.9160288877113,
+    "y": 639.6010610620851
+   },
+   "42": {
+    "node_type": "multimarker",
+    "x": 592.0839711122887,
+    "y": 660.3989389379149
+   },
+   "43": {
+    "node_type": "midmarker",
+    "x": 275.0,
+    "y": 460.0
+   },
+   "44": {
+    "node_type": "multimarker",
+    "x": 255.0,
+    "y": 460.0
+   },
+   "45": {
+    "node_type": "multimarker",
+    "x": 295.0,
+    "y": 460.0
+   },
+   "46": {
+    "node_type": "midmarker",
+    "x": 820.0,
+    "y": 720.0
+   },
+   "47": {
+    "node_type": "multimarker",
+    "x": 800.0,
+    "y": 720.0
+   },
+   "48": {
+    "node_type": "multimarker",
+    "x": 840.0,
+    "y": 720.0
+   },
+   "49": {
+    "node_type": "midmarker",
+    "x": 400,
+    "y": 560
+   },
+   "50": {
+    "node_type": "multimarker",
+    "x": 405.2623481158422,
+    "y": 540.7047235752453
+   },
+   "51": {
+    "node_type": "multimarker",
+    "x": 394.5055774420524,
+    "y": 579.2304789528165
+   },
+   "52": {
+    "node_type": "midmarker",
+    "x": 460,
+    "y": 800
+   },
+   "53": {
+    "node_type": "multimarker",
+    "x": 445.85786437626905,
+    "y": 785.857864376269
+   },
+   "54": {
+    "node_type": "multimarker",
+    "x": 460.0,
+    "y": 820.0
+   },
+   "55": {
+    "node_type": "midmarker",
+    "x": 110.0,
+    "y": 120.0
+   },
+   "56": {
+    "node_type": "multimarker",
+    "x": 130.0,
+    "y": 120.0
+   },
+   "57": {
+    "node_type": "multimarker",
+    "x": 90.0,
+    "y": 120.0
+   },
+   "58": {
+    "node_type": "midmarker",
+    "x": 1030.0,
+    "y": 340.0
+   },
+   "59": {
+    "node_type": "multimarker",
+    "x": 1010.0,
+    "y": 340.0
+   },
+   "60": {
+    "node_type": "multimarker",
+    "x": 1050.0,
+    "y": 340.0
+   },
+   "61": {
+    "node_type": "midmarker",
+    "x": 1030.0,
+    "y": 460.0
+   },
+   "62": {
+    "node_type": "multimarker",
+    "x": 1010.0,
+    "y": 460.0
+   },
+   "63": {
+    "node_type": "multimarker",
+    "x": 1050.0,
+    "y": 460.0
+   },
+   "64": {
+    "node_type": "midmarker",
+    "x": 1030.0,
+    "y": 580.0
+   },
+   "65": {
+    "node_type": "multimarker",
+    "x": 1010.0,
+    "y": 580.0
+   },
+   "66": {
+    "node_type": "multimarker",
+    "x": 1050.0,
+    "y": 580.0
+   },
+   "67": {
+    "node_type": "midmarker",
+    "x": 110.0,
+    "y": 460.0
+   },
+   "68": {
+    "node_type": "multimarker",
+    "x": 130.0,
+    "y": 460.0
+   },
+   "69": {
+    "node_type": "multimarker",
+    "x": 90.0,
+    "y": 460.0
+   },
+   "70": {
+    "node_type": "midmarker",
+    "x": 1030.0,
+    "y": 720.0
+   },
+   "71": {
+    "node_type": "multimarker",
+    "x": 1010.0,
+    "y": 720.0
+   },
+   "72": {
+    "node_type": "multimarker",
+    "x": 1050.0,
+    "y": 720.0
+   }
+  },
+  "text_labels": {
+   "t1": {
+    "text": "cytosol",
+    "x": 310,
+    "y": 70
+   },
+   "t2": {
+    "text": "extracellular",
+    "x": 30,
+    "y": 40
+   },
+   "t3": {
+    "text": "biomass",
+    "x": 430,
+    "y": 870
+   }
+  },
+  "canvas": {
+   "x": -40,
+   "y": -40,
+   "width": 1220,
+   "height": 980
+  }
+ }
+]

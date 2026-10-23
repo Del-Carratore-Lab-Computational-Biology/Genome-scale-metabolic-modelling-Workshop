@@ -1,0 +1,11 @@
+# Conda environment for the CODE-M workshop notebooks.
+# Create it with:  conda env create -f environment.yml
+# Activate it with: conda activate code-m
+name: code-m
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+      - -r requirements.txt
